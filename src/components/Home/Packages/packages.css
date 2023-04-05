@@ -1,0 +1,25 @@
+.form__section{
+    box-shadow: 0px 4px 25px rgba(141, 198, 211, 0.15);
+}
+.form__section  > .container > div {
+   border:1px solid #b9b8ba; 
+   border-radius: 4px;
+   outline: none;
+   overflow: visible;
+}
+.form__section > .container > div > input:focus , .form__section > .container > div > input:valid{
+    border:1px solid #79747E; 
+    padding-left: 8px;
+    outline: none;
+}
+.form__section > .container > div > input + label{
+    transition: all .3s ease-in-out;
+}
+.form__section > .container > div > input:focus + label , .form__section > .container > div > input:valid + label{
+    top:-10px;
+    z-index: 5;
+    color:#112211;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 1px 5px;
+} 

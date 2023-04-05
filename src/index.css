@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    
+    position: relative;
+}
+.navlinks .link{
+    transition-duration: 0.3s;
+}
+.navlinks .active .link{
+    color: #3282AD;
+    font-weight: 500;
+
+}
+.navlinks .link::after{
+    content: "";
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 4px;
+    background-color: #3282AD;
+    transition:transform .3s;
+    transform-origin: right;
+    border-radius: 5px;
+   
+}
+.navlinks .link:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navlinks .active .link::after{
+    transform: scaleX(1);
+}
+
+.packages__input:focus{
+    box-shadow: 0 0 0 0.25rem rgba(53,94,252,0.25);
+    border-radius: 4px;
+}
+
+.cards{
+    transition: all .2s ease-in-out;
+}
+.cards:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0px 0px 25px rgba(50, 130, 173, 0.15);
+}
+.testomonial__img{
+    transition-duration: all .5s ease-in-out;
+}
+.cards:hover > .testomonial__img{
+   filter: contrast(0.7);
+}
+.hero .map{
+    transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0);
+}
+.hero .plane{
+    transform: matrix(0.89, 0.46, -0.42, 0.91, 0, 0);
+    transform: translateY(-28vh);
+}
+.hero .plane_route {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.card1, .card2{
+    filter: drop-shadow(0px 4px 25px rgba(50, 130, 173, 0.15));
+}
+
+.map_img2{
+    mix-blend-mode: multiply;
+}
+.spiral_rotate > span:nth-child(1){
+    animation: infinite_rotate 8s linear infinite;
+}
+.spiral_rotate > span:nth-child(2){
+    animation: infinite_rotate 10s linear infinite;
+}
+.spiral_rotate > span:nth-child(3){
+    animation: infinite_rotate 12s linear infinite;
+}
+.spiral_rotate > span:nth-child(4){
+    animation: infinite_rotate 14s linear infinite;
+}
+.spiral_rotate > span:nth-child(5){
+    animation: infinite_rotate 16s linear infinite;
+}
+
+
+@keyframes infinite_rotate {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.test_card{
+    box-shadow: 0px 0px 25px rgba(50, 130, 173, 0.15);
+}
+
+.floating__footer-rightSection .footer__circle{
+    background: linear-gradient(90deg, #44A4BE 0%, #D6F1FF 100%);
+}
+.floating__footer-rightSection img{
+    background: linear-gradient(160.78deg, #F2F3F4 8.73%, #EDEEEF 38.42%, #DFE0E0 73.06%, #D5D6D6 91.21%);
+}
+.customer__comment {
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+
+/* page3 */
+
+.packagesPage__hero .floating__header span , .packagesPage__hero .floating__header label{
+    transition: .5s ease-in-out;
+}
+ .packagesPage__hero .floating__header input:valid ~ span{
+    background-color: #3282AD;
+}
+.packagesPage__hero .floating__header label{
+    transition: all .2s ease-in-out;
+}
+.packagesPage__hero .floating__header input:focus ~ label, .packagesPage__hero .floating__header input:valid ~ label{
+    border:2px solid #3282AD;
+}
+.package__details .leftsection .package__details-heading{
+    box-shadow: 0px 4px 25px rgba(141, 198, 211, 0.15);
+}
+
+.package__details .leftsection .itinerary__details .itinerary__days .days__details{
+    box-shadow: 0px 4px 25px rgba(141, 198, 211, 0.15);
+}
+
+.add__information .add__information-boxes{
+    box-shadow: 0px 4px 25px rgba(141, 198, 211, 0.15);
+}
+
+.package__details .rightsection .rightsection-offer{
+    box-shadow: 0px 4px 25px rgba(141, 198, 211, 0.15);
+}
+.rightsection .rightsection__customerDetails .topSection{
+    box-shadow: 0px 4px 25px rgba(141, 198, 211, 0.15);
+border-radius: 5px 5px 0px 0px;
+}
+.rightsection .rightsection__customerDetails .bottomSection{
+    box-shadow: 0px 4px 25px rgba(141, 198, 211, 0.15);
+border-radius: 0px 0px 5px 5px;
+}
+.rightsection .rightsection__customerDetails .bottomSection .inputSection input:focus ~ label,
+.rightsection .rightsection__customerDetails .bottomSection .inputSection input:valid ~ label{
+    border:1px solid #3282AD;
+}
+.rightsection .rightsection__customerDetails .bottomSection .inputSection input::placeholder{
+    text-transform: capitalize;
+}
+ .rightsection .rightSection__helpline , .rightsection .rightsection__FAQ_section{
+    box-shadow: 0px 4px 25px rgba(141, 198, 211, 0.15);
+border-radius: 5px;
+}
