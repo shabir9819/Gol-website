@@ -56,11 +56,6 @@ const navLinks = [
     link: "about_us_page",
   },
   {
-    id: "navlink5",
-    title: "gol",
-    link: "gol_page",
-  },
-  {
     id: "navlink6",
     title: "support",
     link:"support_page"

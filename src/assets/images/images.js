@@ -1,3 +1,5 @@
+import menu from "./menu.svg"
+import close from "./close.svg"
 import girl_img from "./Girl_photo.png";
 import logo from "./gol-logo..jpg";
 import logo_2 from "./logo__2.png";
@@ -71,7 +73,19 @@ import FAQ__add_icon from "./FAQ__add_icon.png"
 import FAQ__minus_icon from "./FAQ__minus_icon.png"
 
 
+//Page_Resevation
+
+import reservation__hero from "./reservation__hero_img.jpg"
+
+//About_Lakshadweep_Page
+
+import about_lakshadweep_img1 from "./about_lakshadweep_img1.jpg"
+import about_lakshadweep_map_img1 from "./about_lakshadweep_map_img1.jpg"
+
+
 export {
+  menu,
+  close,
   girl_img,
   logo,
   logo_2,
@@ -138,4 +152,7 @@ export {
   FAQ__search_icon,
   FAQ__add_icon,
   FAQ__minus_icon,
+  reservation__hero,
+  about_lakshadweep_img1,
+  about_lakshadweep_map_img1
 };

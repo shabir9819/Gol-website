@@ -33,9 +33,9 @@ export default function Hero_Packages_page() {
           <img
             src={boat__img}
             alt="boat__img"
-            className="absolute w-[200px] md:w-[250px] lg:w-[444px] top-[0%] right-[-7%] md:top-[30%] md:right-[1%] lg:top-[13%] lg:right-[-1%] z-[5]"
+            className="absolute w-[180px] md:w-[250px] lg:w-[444px] top-[0%] right-[-7%] md:top-[30%] md:right-[1%] lg:top-[13%] lg:right-[-1%] z-[5]"
           />
-          <div className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px]  absolute right-[15%] bottom-[20%] flex justify-center items-center spiral_rotate">
+          <div className="w-[130px] h-[130px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px]  absolute right-[15%] bottom-[20%] flex justify-center items-center spiral_rotate">
             <span className="w-full absolute h-full bg-transparent border-dotted border-2 border-[#7d848b90] rounded-full"></span>
             <span className="w-[80%] absolute h-[80%] bg-transparent border-dotted border-2 border-[#7d848b90] rounded-full"></span>
             <span className="w-[60%] absolute h-[60%] bg-transparent border-dotted border-2 border-[#7d848b90] rounded-full"></span>

@@ -1,0 +1,42 @@
+.booking__section{
+    box-shadow: 0px 4px 25px rgba(141, 198, 211, 0.15);
+}
+.booking__section  > .booking__inner_section > div {
+   border:1px solid #b9b8ba; 
+   border-radius: 4px;
+   outline: none;
+   overflow: visible;
+}
+.booking__section .booking__inner_section{
+    box-shadow: 4px 4px 15px #ddd;
+}
+.booking__section > .booking__inner_section > div > input:focus , .booking__section > .booking__inner_section > div > input:valid{
+    border: none; 
+    border-radius: 4px;
+    padding-left: 8px;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(53,94,252,0.25);
+}
+.booking__section > .booking__inner_section > div > input + label{
+    transition: all .3s ease-in-out;
+}
+.booking__section > .booking__inner_section > div > input:focus + label , .booking__section > .booking__inner_section > div > input:valid + label{
+    top:-10px;
+    z-index: 5;
+    color:#112211;
+    font-size: 16px;
+    line-height: 17px;
+    padding: 1px 5px;
+} 
+
+/* Chrome, Safari, Edge, Opera */
+.booking__section > .booking__inner_section input::-webkit-outer-spin-button,
+.booking__section > .booking__inner_section input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.booking__section > .booking__inner_section input[type=number] {
+  -moz-appearance: textfield;
+}
