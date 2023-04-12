@@ -12,7 +12,7 @@ import About_Lakshadweep_Page from "./components/About_Lakshadweep_Page/About_La
 function App() {
   return (
     <>
-      <div className="w-full px-1 md:px-10 overflow-hidden h-auto ">
+      <div className="w-full overflow-hidden h-auto ">
         <Navbar />
       </div>
 

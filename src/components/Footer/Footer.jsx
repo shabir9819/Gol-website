@@ -24,14 +24,14 @@ export default function Footer() {
               <p className="w-[70%] md:w-full text-[15px] md:text-[26px] lg:text-[32px] leading-[25px] lg:leading-[27px] text-[#FFFFFF] mb-[20px] md:mb-[69px]">
                 The best travel in the world
               </p>
-              <div className="googlePlay__button px-2 py-1 md:px-[15px] md:py-[10px] bg-[#1A6892] w-[60%] md:w-[213px] flex flex-row items-center rounded-[4px] relative z-[5]">
+              <div className="googlePlay__button px-2 py-1 md:px-[15px] md:py-[10px] bg-[#1A6892] hover:bg-[#265269] w-[60%] md:w-[213px] flex flex-row items-center rounded-[4px] relative z-[5] cursor-pointer">
                 <img
                   src={googlePlay__logo}
                   alt="google__play "
                   className=" mr-[5px] md:mr-[11px] w-[15px] h-[15px] md:w-[37px] md:h-[37px] object-contain"
                 />
-                <div>
-                  <p className="text-[4px] md:text-[8px] leading-[11px] text-[#FFFFFF] uppercase">
+                <div >
+                  <p className="text-[6px] md:text-[10px] leading-[11px] text-[#FFFFFF] uppercase">
                     GET IN ON
                   </p>
                   <p className="text-[10px] md:text-[16px] leading-[22px] tracking-[0.5px] text-[#FFFFFF] font-bold capitalize">
@@ -88,7 +88,7 @@ export default function Footer() {
               <img
                 src={Footer__phone_img}
                 alt="Footer__radial_img"
-                className=" w-[120px] md:w-[200px]  lg:w-auto"
+                className="Footer__phone_img w-[120px] md:w-[200px]  lg:w-auto"
               />
             </div>
           </div>

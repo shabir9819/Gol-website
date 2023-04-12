@@ -2,9 +2,10 @@ import React from "react";
 
 
 
-export default function Card({heading, para, img_src, id}) {
+export default function Card({heading, para, img_src, id, currentImg, index}) {
+ 
   return (
-    <div className="card1 w-full h-auto lg:w-[390px] md:h-[516px] relative rounded-[8px] overflow-hidden cards ">
+    <div className={` card1 w-full h-auto lg:w-[390px] md:h-[516px] relative rounded-[8px] overflow-hidden cards ${(currentImg === index )? "activeCard": null}`}>
       <p className="absolute text-[16px] text-[#3282AD] leading-[21px] font-bold bg-white rounded-full px-[12px] py-[5px] top-4 right-4">&#8377; 500</p>
       <img
         src={img_src}
@@ -21,7 +22,7 @@ export default function Card({heading, para, img_src, id}) {
               </span>
               {heading}
             </h4>
-            <p className="text-[14px] text-[#5A5A5A] leading-[19px] font-light ">
+            <p className="para text-[14px] text-[#5A5A5A] leading-[19px] font-light ">
              {para}
             </p>
           </div>

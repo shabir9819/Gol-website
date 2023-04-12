@@ -1,0 +1,23 @@
+.compass__img{
+    animation: spin 10s ease-in-out infinite ;
+}
+@keyframes spin {
+    0%{
+        transform: rotateZ(30deg);
+    }
+    20%{
+        transform: rotateZ(180deg);
+    }
+    40%{
+        transform: rotateZ(200deg);
+    }
+    60%{
+        transform: rotateZ(90deg);
+    }
+    80%{
+        transform: rotateZ(300deg);
+    }
+    100%{
+        transform: rotateZ(10deg);
+    }
+}

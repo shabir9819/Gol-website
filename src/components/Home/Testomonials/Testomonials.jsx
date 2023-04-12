@@ -1,9 +1,30 @@
-import React from "react";
+import React , {useState, useEffect} from "react";
 import { test_cards } from "../../../constants/constants";
 
 import Testomonials_card from "../../Card/Testomonials_card";
 
 export default function Testomonials() {
+  const [currentImg, setCurrentImg] = useState(0);
+
+
+  const imgSlider= ()=>{
+    setCurrentImg((preVal)=>{
+       if(currentImg < test_cards.length-1){
+        return (preVal + 1);  
+      }
+      else if(currentImg == test_cards.length-1){
+        return 0;
+      }
+    })
+  }
+  
+  useEffect(()=>{
+    setTimeout(()=>{
+      imgSlider();
+    }, 2000);
+
+    
+  }, [currentImg])
   return (
     <>
       <section className="overflow-hidden">
@@ -15,14 +36,14 @@ export default function Testomonials() {
         <div className="flex flex-row  flex-wrap justify-center">
 
       {test_cards.map((person, index)=>{
-          return <Testomonials_card key={person.id} {...person} test_cards= {test_cards} />
+          return <Testomonials_card key={person.id} {...person} test_cards= {test_cards} currentImg = {currentImg} index={index} />
         })}
         </div>
 
         <div className="card__dots flex flex-row  gap-[24px] justify-center mb-[80px]">
                 {
                     test_cards.map((card, index)=>{
-                        return  <div className={`w-[32px] h-[32px] rounded-full border-[1px] border-[#3282AD] ${(index=== 1) ? "bg-[#3282AD]" : "bg-white"}`}></div>
+                        return  <div className={`w-[32px] h-[32px] rounded-full border-[1px] border-[#3282AD] ${(index=== currentImg) ? "bg-[#3282AD]" : "bg-white"}`}></div>
                     })
                 }
                 </div>

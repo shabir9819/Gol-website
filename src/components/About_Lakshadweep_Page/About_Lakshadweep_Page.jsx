@@ -4,23 +4,37 @@ import {
   about_lakshadweep_map_img1,
   reservation__hero,
 } from "../../assets/images/images";
+import { ocean__video } from "../../assets/videos/videos";
 
 export default function About_Lakshadweep_Page() {
+ 
+
+
+
   return (
     <section id="about_lakswadweep_page">
-      <div className="reservation__image w-full h-[calc(100vh-80vh)] md:h-[calc(100vh-45vh)] relative">
-        <img
-          src={reservation__hero}
+      <div className="reservation__video w-full h-[calc(100vh-75vh)] md:h-[calc(100vh-35vh)] relative">
+        <video
+          src={ocean__video}
+          
           alt="reservation__hero"
-          className="w-full h-full object-cover "
+          className="ocean__video w-full h-full object-cover opacity-[0.95] "
+          
+          type="video/mp4"
+          frameborder="0"
+          allowfullscreen
+          autoPlay
+          loop
+          muted
+        
         />
-        <div className="absolute w-full top-[20%] text-center">
+        <div className="absolute w-full  top-[20%] text-center z-30">
           <h2 className="text-[34px] md:text-[44px] text-[white] leading-[62px] font-bold capitalize">
             about lakshadweep
           </h2>
         </div>
       </div>
-      <div className="text-[#525252] text-[18px] leading-[26px] w-full relative px-4 py-4 md:px-28 md:py-16">
+      <div className="text-[#525252] text-[18px] leading-[26px] w-full relative px-4 py-4 md:px-20 lg:px-28 md:py-16">
         <p className="para1 mb-3">
           Lakshadweep Islands commonly known as coral paradise of India, a group
           of islands which is scattered in the Arabian Sea. This is one of the
@@ -159,8 +173,8 @@ export default function About_Lakshadweep_Page() {
         <div>
           <ol className=" list-decimal ml-10 my-2">
             <div className="my-3">
-            The island offers numerous activities for adults and children alike
-            as listed below.
+              The island offers numerous activities for adults and children
+              alike as listed below.
             </div>
             <li>Scuba diving</li>
             <li>Snorkeling</li>
@@ -188,9 +202,7 @@ export default function About_Lakshadweep_Page() {
           stay in the resorts, the resorts always find a way to accommodate
           outside guests in the best way possible.
         </p>
-        <p className="para16 mb-3">
-        Welcome to coral paradise of India.
-        </p>
+        <p className="para16 mb-3">Welcome to coral paradise of India.</p>
       </div>
     </section>
   );

@@ -1,10 +1,11 @@
 import React from "react";
 
 
-export default function Testomonials_card({ id, img_src, name, desc, star }) {
+export default function Testomonials_card({ id, img_src, name, desc, star, currentImg, index }) {
+  
   return (
     <>
-      <div className="test_card w-full lg:w-[393px] h-auto lg:h-[524px] bg-[#FFFFFF] rounded-[15px] m-[24px] flex flex-col items-center p-[27px] cards">
+      <div className={`test_card w-full lg:w-[393px] h-auto lg:h-[524px] bg-[#FFFFFF] rounded-[15px] m-[24px] flex flex-col items-center p-[27px] cards ${(currentImg === index )? "activeCard": null}`}>
         <img src={img_src} alt={id} className="testomonial__img w-[131px] h-[131px] mb-[17px]" />
         <p className="text-[22px] leading-[22px] text-[#222222] font-semibold tracking-[0.03em] mb-[8px] capitalize">
           {" "}

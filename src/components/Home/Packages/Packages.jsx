@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { card1, packages } from "../../../constants/constants";
 import Button from "../../Button/Button";
 import Card from "../../Card/Card";
 import "./packages.css";
 
 export default function Packages() {
+  const [currentImg, setCurrentImg] = useState(0);
+
+
+  const imgSlider= ()=>{
+    setCurrentImg((preVal)=>{
+       if(currentImg < card1.length-1){
+        return (preVal + 1);  
+      }
+      else if(currentImg == card1.length-1){
+        return 0;
+      }
+    })
+  }
+  
+  useEffect(()=>{
+    setTimeout(()=>{
+      imgSlider();
+    }, 2000);
+
+    
+  }, [currentImg])
+
+
   return (
     <>
-      <section className="mt-[32px] md:mt-[152px] px-10 ">
+      <section className="mt-[32px] md:mt-[152px] px-4 md:px-10 ">
         <form className="mt-[75px] form__section bg-[#FFFFFF] py-[16px] px-[24px] mb-[88px]">
           <h4 className="text-[20px] font-bold leading-[27px] text-[#112211] mb-[32px]">
             Where are you flying?
@@ -57,7 +80,7 @@ export default function Packages() {
 
                 {
                     card1.map((card, index)=>{
-                        return  <Card {...card}/>
+                        return  <Card {...card} currentImg = {currentImg} index={index}/>
                     })
                 }
                 </div>
@@ -65,7 +88,7 @@ export default function Packages() {
                 <div className="card__dots flex flex-row gap-[24px] justify-center mb-[40px] md:mb-[80px]">
                 {
                     card1.map((card, index)=>{
-                        return  <div className={`w-[22px] h-[22px] md:w-[32px] md:h-[32px] rounded-full border-[1px] border-[#3282AD] ${(index=== 1) ? "bg-[#3282AD]" : "bg-white"}`}></div>
+                        return  <div className={`w-[22px] h-[22px] md:w-[32px] md:h-[32px] rounded-full border-[1px] border-[#3282AD] ${(index=== currentImg) ? "bg-[#3282AD]" : "bg-white"}`}></div>
                     })
                 }
                 </div>
