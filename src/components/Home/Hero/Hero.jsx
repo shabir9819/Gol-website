@@ -2,6 +2,7 @@ import React from 'react'
 import "./hero.css"
 import { compass, girl_img, map, plane, plane_route } from '../../../assets/images/images'
 import Button from '../../Button/Button'
+import PreBlurLoader from '../../PreBlurLoader/PreBlurLoader'
 
 
 export default function Hero() {
@@ -22,14 +23,18 @@ export default function Hero() {
         </div>
         <div  className='flex md:flex-1  '>
             <div className='relative md:absolute  right-0'  >
-            <img src={girl_img} alt="girl_img" className='w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[421px] lg:h-[425px] object-contain rounded-[50%] overflow-hidden' />
+
+            {/* <img src={girl_img} alt="girl_img" className='w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[421px] lg:h-[425px] object-contain rounded-[50%] overflow-hidden' /> */}
+            <PreBlurLoader imgSrc={girl_img} imgId={"girl_img"} cssText={'w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[421px] lg:h-[425px] object-contain rounded-[50%] overflow-hidden'} blurId={"LRL|_ur=?aEO~VIn%h%2Ri%gNfn#"} type={"image"}/>
+
             <div className='map absolute lg:hidden top-[-10px] '  >
             <img src={map} alt="map" className='w-[full] h-[100%] scale-[1.4]' />
 
             </div>
             </div>
             <div className='map hidden md:flex md:absolute top-[-10px] '  >
-            <img src={map} alt="map" className='w-[full] h-[60%]' />
+            {/* <img src={map} alt="map" className='w-[full] h-[60%]' /> */}
+            <PreBlurLoader imgSrc={map} imgId={"map"} cssText={'w-[full] h-[60%]'} blurId={"L6PZfSi_.AyE_3t7t7R**0o#DgR4"} type={"image"}/>
 
             </div>
             <div className='plane hidden md:visible md:absolute left-[34%] right[-6%] bottom-[-37%]'  >

@@ -6,18 +6,19 @@ import {
 } from "../../assets/images/images";
 import { ocean__video } from "../../assets/videos/videos";
 import { Blurhash } from "react-blurhash";
+import PreBlurLoader from "../PreBlurLoader/PreBlurLoader";
 
 export default function About_Lakshadweep_Page() {
   const [loading, setLoading]=useState(false);
   return (
     <section id="about_lakswadweep_page">
       <div className="reservation__video w-full h-[calc(100vh-75vh)] md:h-[calc(100vh-35vh)] relative">
-        <div className={loading ? "hidden" : "inline"}>
+        {/* <div className={loading ? "hidden" : "inline"}>
 
         <Blurhash
         width={"100%"}
         height={"100%"}
-        hash="LRG]R8G0JWR$03$+$%xV~XroaIWU"
+        hash="L3EolJ~BD-oL0fxb-WWU00D*j=xv"
         punch={1}
         
         />
@@ -35,7 +36,8 @@ export default function About_Lakshadweep_Page() {
           autoPlay
           loop
           muted
-          />
+          /> */}
+          <PreBlurLoader imgSrc={ocean__video} imgId={"reservation__hero"} cssText={"ocean__video w-full h-full object-cover opacity-[0.95]"} blurId={"L3EolJ~BD-oL0fxb-WWU00D*j=xv"} type={"video"}/>
         <div className="absolute w-full  top-[20%] text-center z-30">
           <h2 className="text-[34px] md:text-[44px] text-[white] leading-[62px] font-bold capitalize">
             about lakshadweep

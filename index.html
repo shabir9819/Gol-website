@@ -24,13 +24,28 @@
 <link rel="preload" href="./src/assets/images/images.js" as="script" type="text/javascript">
 <link rel="preload" href="./src/assets/videos/videos.js" as="script" type="text/javascript">
 
+<link rel="stylesheet" href="/src/preloader.css">
 
   <script src="https://kit.fontawesome.com/351f5a9d26.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload= "preloader()">
   <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <div id="loader">
+    <div class="loading-container">
+      <div class="box-loading">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script  src="/src/preloader.js">
+  </script>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>

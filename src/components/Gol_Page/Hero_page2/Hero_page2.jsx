@@ -1,5 +1,6 @@
 import React from 'react'
 import { map1__page2 } from '../../../assets/images/images'
+import PreBlurLoader from '../../PreBlurLoader/PreBlurLoader'
 
 
 export default function Hero_page2() {
@@ -7,7 +8,8 @@ export default function Hero_page2() {
     <>
     <section>
         <div className='w-full flex justify-center items-center overflow-hidden'>
-        <img src={map1__page2} alt="map1__page2" className='w-[80%] h-[60%] lg:w-[896px] lg:h-[445px]' />
+        {/* <img src={map1__page2} alt="map1__page2" className='w-[80%] h-[60%] lg:w-[896px] lg:h-[445px]' /> */}
+        <PreBlurLoader imgSrc={map1__page2} imgId={"map1__page2"} cssText={'w-[80%] h-[60%] lg:w-[896px] lg:h-[445px]'} blurId={"L6PZfSi_.AyE_3t7t7R**0o#DgR4"} type={"image"}/>
 
             <div className='w-[150px] h-[150px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px]  absolute  flex justify-center items-center spiral_rotate' >
                 <h1 className='text-[24px] md:text-[38px] lg:text-[48px] text-[#3A3A3A] leading-[30px] md:leading-[67px] font-bold capitalize text-center'> about us</h1>

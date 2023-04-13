@@ -1,6 +1,7 @@
 import React from "react";
 import "./reservation__page.css";
 import Button from "../Button/Button";
+import PreBlurLoader from "../PreBlurLoader/PreBlurLoader";
 import { island__video } from "../../assets/videos/videos";
 
 export default function Reservation_Page() {
@@ -8,7 +9,7 @@ export default function Reservation_Page() {
     <>
       <section id="reservation_page" className="w-full overflow-hidden ">
         <div className="reservation__imag w-full h-[calc(100vh-75vh)] md:h-[calc(100vh-25vh)] relative">
-          <video
+          {/* <video
             src={island__video}
             alt="reservation__hero"
             className="w-full h-full object-cover brightness-100"
@@ -18,7 +19,8 @@ export default function Reservation_Page() {
             autoPlay
             loop
             muted
-          />
+          /> */}
+           <PreBlurLoader imgSrc={island__video} imgId={"island__video"} cssText={"w-full h-full object-cover brightness-100"} blurId={"LuFOc2R+M|Rk~AWXM|Rk?Gj[Rjae"} type={"video"}/>
           <div className="absolute w-full top-[50%] text-center">
             <h2 className="text-[34px] md:text-[44px] text-[white] leading-[62px] font-bold capitalize z-30">
               Find Reservations
