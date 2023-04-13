@@ -107,7 +107,21 @@ body{
 
 .map_img2{
     mix-blend-mode: multiply;
+    animation: glowing 6s ease-in-out infinite;
 }
+
+@keyframes glowing {
+    0%{
+        filter: brightness(1);
+    }
+    50%{
+        filter: brightness(0);
+    }
+    100%{
+        filter: brightness(1);
+    }
+}
+
 .spiral_rotate > span:nth-child(1){
     animation: infinite_rotate 8s linear infinite;
 }

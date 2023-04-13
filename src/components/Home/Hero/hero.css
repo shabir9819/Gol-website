@@ -1,5 +1,9 @@
 .compass__img{
     animation: spin 10s ease-in-out infinite ;
+    transition: .2s;
+}
+.compass__wrapper:hover > span .compass__img{
+    animation: none;
 }
 @keyframes spin {
     0%{

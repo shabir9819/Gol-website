@@ -1,33 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   about_lakshadweep_img1,
   about_lakshadweep_map_img1,
   reservation__hero,
 } from "../../assets/images/images";
 import { ocean__video } from "../../assets/videos/videos";
+import { Blurhash } from "react-blurhash";
 
 export default function About_Lakshadweep_Page() {
- 
-
-
-
+  const [loading, setLoading]=useState(false);
   return (
     <section id="about_lakswadweep_page">
       <div className="reservation__video w-full h-[calc(100vh-75vh)] md:h-[calc(100vh-35vh)] relative">
+        <div className={loading ? "hidden" : "inline"}>
+
+        <Blurhash
+        width={"100%"}
+        height={"100%"}
+        hash="LRG]R8G0JWR$03$+$%xV~XroaIWU"
+        punch={1}
+        
+        />
+        </div>
         <video
+          onLoadedMetadata={()=> setLoading(true)}
           src={ocean__video}
           
+
           alt="reservation__hero"
-          className="ocean__video w-full h-full object-cover opacity-[0.95] "
-          
+          className={`ocean__video w-full h-full object-cover opacity-[0.95] ${!loading ? "hidden" : "inline"}`}
           type="video/mp4"
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
           autoPlay
           loop
           muted
-        
-        />
+          />
         <div className="absolute w-full  top-[20%] text-center z-30">
           <h2 className="text-[34px] md:text-[44px] text-[white] leading-[62px] font-bold capitalize">
             about lakshadweep
@@ -64,6 +72,7 @@ export default function About_Lakshadweep_Page() {
             src={about_lakshadweep_img1}
             alt="about_lakshadweep_img1"
             className="w-[558px] h-[418px]"
+            
           />
         </div>
         <p className="para3 mb-3">

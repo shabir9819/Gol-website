@@ -13,8 +13,8 @@ export default function Reservation_Page() {
             alt="reservation__hero"
             className="w-full h-full object-cover brightness-100"
             type="video/mp4"
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
             autoPlay
             loop
             muted

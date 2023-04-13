@@ -1,9 +1,8 @@
 import React from "react";
 import {
-  facebook,
-  footer__circle,
+
   footer__map,
-  footer__phone,
+ 
   Footer__phone_img,
   Footer__radial_img,
   googlePlay__logo,

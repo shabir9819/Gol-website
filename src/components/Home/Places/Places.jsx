@@ -23,7 +23,7 @@ export default function Places() {
         })}
       </div>
 
-      <div className="w-full flex flex-col md:flex-row items-center justify-center md:justify-start h-auto md:h-[261px] bg-[#42A7C3] rounded-[15px] p-3 md:p-[32px] relative overflow-hidden">
+      <div className="places__bottom_container w-full flex flex-col md:flex-row items-center justify-center md:justify-start h-auto md:h-[261px] bg-[#42A7C3] rounded-[15px] p-3 md:p-[32px] relative overflow-hidden">
         <div className="w-full lg:w-[513px] mb-2 md:mb-0">
           <h4 className="w-full text-center md:text-left md:w-[451px] text-[15px] md:text-[32px] leading-[20px] md:leading-[50px] font-bold text-[#FFFFFF] tracking-wider mb-1 md:mb-[32px]">
             Let’s Ready to Explore The World With Us.

@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const scrollEvent = (e) => {
     const scrollData = e.currentTarget.scrollY;
-    console.log(scrollData);
+  
     setScroll((preVal) => {
       return { ...preVal, preY: scrollData };
     });
@@ -52,17 +52,17 @@ export default function Navbar() {
           <ul className="navlinks flex-1 justify-start items-center hidden lg:flex flex-row text-center">
             {navLinks.map((link, index) => {
               return (
-                <NavLink to={link.link}>
+                <NavLink to={link.link} key={link.id}>
                   <li
                     className={`link font-sans text-[16px] text-[#3A3A3A] capitalize font-normal leading-[22px] ${
                       index < navLinks.length ? "mr-6" : "mr-0"
                     }  hover:cursor-pointer relative`}
-                    key={link.id}
+                    
                   >
                     {link.title}{" "}
                     {link.title === "packages" && (
                       <span>
-                        <i class="fa-solid fa-caret-down"></i>
+                        <i className="fa-solid fa-caret-down"></i>
                       </span>
                     )}
                   </li>
