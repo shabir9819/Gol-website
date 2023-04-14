@@ -8,7 +8,7 @@ export default function Reservation_Page() {
   return (
     <>
       <section id="reservation_page" className="w-full overflow-hidden ">
-        <div className="reservation__imag w-full h-[calc(100vh-75vh)] md:h-[calc(100vh-25vh)] relative">
+        <div className="reservation__imag w-full h-[calc(100vh-75vh)] md:h-[calc(100vh-60vh)]  lg:h-[calc(100vh-25vh)] relative">
           {/* <video
             src={island__video}
             alt="reservation__hero"
@@ -27,7 +27,7 @@ export default function Reservation_Page() {
             </h2>
           </div>
         </div>
-        <div className="booking__section flex flex-col justify-start w-full relative px-4 py-4 md:px-32 md:py-16">
+        <div className="booking__section flex flex-col justify-start w-full relative px-4 py-4 md:px-16 lg:px-32 md:py-16">
           <div className="booking__inner_section w-full bg-[#fff6f0] p-4 rounded-sm ">
             <div className="relative w-full lg:w-[40%]  h-[56px] mb-[24px]">
               <input

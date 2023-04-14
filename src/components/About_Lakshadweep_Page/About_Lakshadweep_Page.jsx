@@ -12,7 +12,7 @@ export default function About_Lakshadweep_Page() {
   const [loading, setLoading]=useState(false);
   return (
     <section id="about_lakswadweep_page">
-      <div className="reservation__video w-full h-[calc(100vh-75vh)] md:h-[calc(100vh-35vh)] relative">
+      <div className="reservation__video w-full h-[calc(100vh-75vh)] md:h-[calc(100vh-60vh)] lg:h-[calc(100vh-35vh)] relative">
         {/* <div className={loading ? "hidden" : "inline"}>
 
         <Blurhash

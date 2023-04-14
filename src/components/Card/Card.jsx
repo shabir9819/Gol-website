@@ -10,7 +10,7 @@ export default function Card({heading, para, img_src, id, currentImg, index}) {
       <img
         src={img_src}
         alt={id}
-        className="w-full h-[150px] md:h-[352px] "
+        className="w-full h-[150px] md:h-[352px]  "
       />
       <div className="cardDetails p-[16px] ">
         <div className="w-full relative">

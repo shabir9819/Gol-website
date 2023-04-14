@@ -8,12 +8,12 @@ export default function Card2({id ,img_src, heading, para, review}) {
       <img
         src={img_src}
         alt= "img1"
-        className="w-full h-[250px] md:h-[410px] "
+        className="w-full h-[250px] md:h-[340px] lg:h-[410px] "
       />
       <div className="cardDetails lg:p-[16px]  ">
         <div className="w-full relative">
             <p className="absolute bottom-0 left-0 text-[16px] leading-[24px] font-bold"><span className="text-[#3282AD]"><i class="fa-solid fa-star"></i></span>  4.5 <span className=' font-light'>({review} Review)</span></p>
-          <div className="flex flex-col w-[266px] mb-[12px] ">
+          <div className="flex flex-col w-[250px] md:w-[266px] mb-[12px] ">
             <h4 className="text-[20px] leading-[27px] font-semibold mb-[8px] inline-block capitalize">
               <span>
                 <i className="fa-solid fa-location-dot w-[5pxpx] mr-1 "></i>

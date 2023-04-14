@@ -33,8 +33,8 @@ export default function Places() {
             Pellentesque efficitur ac quam in congue.
           </p>
         </div>
-        <div className="map_img2 absolute md:relative w-full h-full md:w-[453px] md:h-[189px]">
-          <img src={map2} alt="map2" />
+        <div className="map_img2 absolute lg:relative w-full h-[calc(100%-50%)] md:w-[453px] md:h-[189px]">
+          <img src={map2} alt="map2"  className="object-contain"/>
         </div>
         <div className="relative md:absolute right-0 md:right-[32px]">
           <button className=" px-[26px] py-[10px] md:px-[36px] md:py-[16px] bg-[#FFFFFF] hover:text-[#3282AD] text-black text-[20px] font-semibold leading-[18px] rounded-[8px] align-middle capitalize">contact us</button>
