@@ -8,8 +8,16 @@ import Navbar from "./components/Navbar/Navbar";
 import Packages_page from "./components/Packages_Page/Packages_page";
 import Reservation_Page from "./components/Reservation_Page/Reservation_Page";
 import About_Lakshadweep_Page from "./components/About_Lakshadweep_Page/About_Lakshadweep_Page";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(()=>{
+    const preloader = ()=>{
+      const loader = document.getElementById("loader");
+      loader.classList.add("hide__preloader");
+     }
+     preloader();
+  }, [])
   return (
     <>
       <div className="w-full overflow-hidden h-auto ">
