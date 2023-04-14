@@ -1,4 +1,4 @@
 const preloader = ()=>{
    const loader = document.getElementById("loader");
-   loader.style.cssText="display:none;";
+   loader.classList.add("hide__preloader");
   }

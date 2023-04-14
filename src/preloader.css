@@ -232,3 +232,9 @@
     animation: moving 1s infinite cubic-bezier(0.6, 0, 0.4, 1) alternate;
   }
   
+
+  /* hiding the preloader */
+
+  .hide__preloader{
+    display: none;
+  }
