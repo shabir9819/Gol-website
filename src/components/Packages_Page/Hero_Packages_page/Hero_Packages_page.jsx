@@ -2,14 +2,15 @@ import React from "react";
 import PreBlurLoader from "../../PreBlurLoader/PreBlurLoader";
 import { boat__img, map1__page2 } from "../../../assets/images/images";
 
-export default function Hero_Packages_page() {
+export default function Hero_Packages_page({pack}) {
+  
   return (
     <>
       <section className="packagesPage__hero overflow-hidden h-[250px] md:h-[400px] lg:h-[688px] mb-6 md:mb-[88px]">
         <div className="w-full flex justify-center items-center relative">
           <div className=" floating__header w-full   absolute text-center flex justify-center items-center flex-col">
-            <h1 className= "text-[28px] leading-[37px] md:text-[48px] text-[#3A3A3A] md:leading-[67px] font-bold mb-[96px]">
-              Maldives
+            <h1 className= "text-[28px] leading-[37px] md:text-[48px] text-[#3A3A3A] md:leading-[67px] font-bold mb-[96px] capitalize">
+              {pack}
             </h1>
             <div className="w-[200px] h-[40px] md:w-[250px] md:h-[50px] lg:w-[428px] lg:h-[60px] bg-transparent  flex items-center relative z-[10]">
               <input

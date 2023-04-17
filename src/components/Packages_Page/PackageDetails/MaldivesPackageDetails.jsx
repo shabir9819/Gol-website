@@ -88,7 +88,7 @@ export default function PackageDetails() {
           day wise itinerary
         </h4>
 
-        {itineraryDays_details.map((itinerary, _) => {
+        {itineraryDays_details.maldives.map((itinerary, _) => {
           return (
             <div
               className="itinerary__days flex flex-col md:flex-row py-[16px] md:py-[46px]  justify-center"

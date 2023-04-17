@@ -43,7 +43,17 @@ const navLinks = [
   {
     id: "navlink2",
     title: "packages",
-    link:"packages_page"
+    link:"packages_page",
+    sublink:[
+      {
+        id: "package1",
+        title: "maldives",
+      },
+      {
+        id: "package2",
+        title: "aggati",
+      },
+    ]
   },
   {
     id: "navlink3",
@@ -325,7 +335,9 @@ const certificate_videos = [
   
 ]
 
-const itineraryDays_details = [
+const itineraryDays_details = {
+  
+  maldives:[
   {
     day:"day 1",
     
@@ -347,7 +359,38 @@ const itineraryDays_details = [
       descr:"On arrival at the Maldives International airport you will be met by the resort's airport representative and will be transferred to Vivanta By Taj Coral Reef by a speedboat ( shared basis ) . Afternoon free for relaxation . Overnight stay at the resort ."
     
   },
-]
+],
+  aggati:[
+  {
+    day:"day 1",
+    
+      activity:"ARRIVAL AT AGGATI",
+      descr:" On arrival at Agatti airport staff will receive. Get a warm welcome with welcome drinks at resort. After your fresh up and lunch take rest for some time and then enjoy the beauty of the nature in the evening. The either sides of the cottages are having fabulous beaches with crystal clear water and you can explore the beauty. Till sunset you can enjoy inthe lap of nature with your loved ones."
+    
+  },
+  {
+    day:"day 2",
+    
+      activity:"AGGATI",
+      descr:"The whole day is exclusively for water sports activities in Agatti. After breakfast you can proceed to watersports activities and Scuba Diving at Dive Center. Bangaram Thinnakar and Kalpitty Island visit is optional and will be arranged at the resort."
+    
+  },
+  {
+    day:"day 3",
+    
+      activity:"AGGATI",
+      descr:"First half of the day is for sightseeing and exploring the local life and culture of the Island. In second half after lunch can proceed to the boat jetty to visit the nearby Island Kalpitti. On the way to Kalpitti by boat you can have a turtle watch and other marine life"
+    
+  },
+  {
+    day:"day 4",
+    
+      activity:"DEPATURE FROM AGGATI",
+      descr:"After Breakfast drop at Airport and with a lifelong memory of the tiny paradise you can fly back to your home."
+    
+  },
+],
+}
 
 
 const addtionalDetails_boxes=[

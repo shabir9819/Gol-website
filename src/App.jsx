@@ -20,7 +20,7 @@ function App() {
   }, [])
   return (
     <>
-      <div className="w-full overflow-hidden h-auto ">
+      <div className="w-full h-auto ">
         <Navbar />
       </div>
 

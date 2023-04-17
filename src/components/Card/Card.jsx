@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+
 
 
 
 export default function Card({heading, para, img_src, id, currentImg, index}) {
+  
  
   return (
     <div className={` card1 w-full h-auto lg:w-[390px] md:h-[516px] relative rounded-[8px] overflow-hidden cards ${(currentImg === index )? "activeCard": null}`}>

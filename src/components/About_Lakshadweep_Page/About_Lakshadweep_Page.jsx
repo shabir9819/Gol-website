@@ -73,7 +73,7 @@ export default function About_Lakshadweep_Page() {
           <img
             src={about_lakshadweep_img1}
             alt="about_lakshadweep_img1"
-            className="w-[558px] h-[418px]"
+            className="w-[558px] h-auto"
             
           />
         </div>
@@ -111,7 +111,7 @@ export default function About_Lakshadweep_Page() {
           <img
             src={about_lakshadweep_map_img1}
             alt="about_lakshadweep_map_img1"
-            className="w-[558px] h-[687px]"
+            className="w-[558px]  h-auto"
           />
         </div>
         <p className="para6 mb-3">

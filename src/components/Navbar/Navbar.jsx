@@ -1,16 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { logo, menu, close } from "../../assets/images/images";
 import { navLinks } from "../../constants/constants";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import PageContext from "../../context/Page/PageContext";
+
 
 export default function Navbar() {
   const [hamToggle, setHamToggle] = useState(false);
   const [scroll, setScroll] = useState({ preY: 0, show: true });
+  const [dropDown, setDropDown] = useState(false);
+
+  //Getting the packages context from PageState.jsx
+  const pageContext = useContext(PageContext);
+  const {pack,dispatchPack,} = pageContext;
+
 
   const scrollEvent = (e) => {
     const scrollData = e.currentTarget.scrollY;
-  
+
     setScroll((preVal) => {
       return { ...preVal, preY: scrollData };
     });
@@ -33,9 +41,9 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`w-full bg-white py-5  px-1 md:px-10 ${(scroll.preY < 40) ? "sticky" : "fixed"}  ${
-          scroll.show ? "top-0" : "top-[-100%]"
-        }  left-0 z-50 duration-[2s]`}
+        className={`w-full bg-white py-5  px-1 md:px-10 ${
+          scroll.preY < 40 ? "sticky" : "fixed"
+        }  ${scroll.show ? "top-0" : "top-[-100%]"}  left-0 z-50 duration-[2s]`}
       >
         <nav className="wrapper__navbar w-full flex flex-row justify-between items-center  lg:justify-start">
           <NavLink to={"/"}>
@@ -52,21 +60,49 @@ export default function Navbar() {
           <ul className="navlinks flex-1 justify-start items-center hidden lg:flex flex-row text-center">
             {navLinks.map((link, index) => {
               return (
-                <NavLink to={link.link} key={link.id}>
-                  <li
-                    className={`link font-sans text-[16px] text-[#3A3A3A] capitalize font-normal leading-[22px] ${
-                      index < navLinks.length ? "mr-6" : "mr-0"
-                    }  hover:cursor-pointer relative`}
-                    
-                  >
-                    {link.title}{" "}
+                <>
+                  <NavLink to={link.link} key={link.id}>
                     {link.title === "packages" && (
-                      <span>
-                        <i className="fa-solid fa-caret-down"></i>
-                      </span>
+                      <li
+                        className={`link font-sans text-[16px] text-[#3A3A3A] capitalize font-normal leading-[22px] ${
+                          index < navLinks.length ? "mr-6" : "mr-0"
+                        }  hover:cursor-pointer relative`}
+                      >
+                        {link.title}{" "}
+                        {link.title === "packages" && (
+                          <>
+                            <span className="w-full">
+                              <i
+                                className={`fa-solid fa-caret-${
+                                  dropDown ? "up" : "down"
+                                }`}
+                              ></i>
+                            </span>
+
+                            <ul className="sublink hidden absolute flex-col w-full h-auto pb-3 rounded-md">
+                              {link.title === "packages" &&
+                                link.sublink.map((slink, index) => (
+                                  <div className={`relative  flex  flex-col translate-y-[10px] pl-4 pr-3 z-50 mb-[3px] w-full ${(pack === slink.title) ? "text-[#3282AD]" : "text-black"}`} onClick={()=>{dispatchPack({type:slink.title , payload:slink.title}); setHamToggle((preVal) => !preVal)}}>
+                                    <li>{slink.title}</li>
+                                  </div>
+                                ))}
+                            </ul>
+                          </>
+                        )}
+                      </li>
                     )}
-                  </li>
-                </NavLink>
+
+                    {link.title !== "packages" && (
+                      <li
+                        className={`link font-sans text-[16px] text-[#3A3A3A] capitalize font-normal leading-[22px] ${
+                          index < navLinks.length ? "mr-6" : "mr-0"
+                        }  hover:cursor-pointer relative`}
+                      >
+                        {link.title}{" "}
+                      </li>
+                    )}
+                  </NavLink>
+                </>
               );
             })}
           </ul>
@@ -101,19 +137,35 @@ export default function Navbar() {
             return (
               <NavLink to={link.link}>
                 <li
-                  className={`link font-sans text-[16px] text-[#3A3A3A] capitalize font-normal leading-[22px] ${
-                    index < navLinks.length - 1 ? "mb-2" : "mb-4"
-                  }  hover:cursor-pointer relative`}
+                  className={`link font-sans text-[16px] text-[#3A3A3A] capitalize font-normal leading-[22px]
+                  
+                  ${
+                     index < navLinks.length - 1 ? "mb-2" :  "mb-4"
+                  }   hover:cursor-pointer relative`}
                   key={link.id}
                   onClick={() => setHamToggle(false)}
                 >
                   {link.title}{" "}
                   {link.title === "packages" && (
-                    <span>
-                      <i class="fa-solid fa-caret-down"></i>
-                    </span>
+                    <>
+                      <span className="w-full">
+                        <i
+                          className={`fa-solid fa-caret-${
+                            dropDown ? "up" : "down"
+                          }`}
+                        ></i>
+                      </span>
+                    </>
                   )}
                 </li>
+                {link.title === "packages" && (<ul className="sublink hidden flex-col w-full mb-2 text-left capitalize">
+                  {link.title === "packages" &&
+                    link.sublink.map((slink, index) => (
+                      <div className={`sublin__wrapper relative flex flex-col translate-y-[10px]  z-50  ml-6 ${index < slink.length ? "mb-1" : "mb-2"} ${(pack === slink.title) ? "text-[#3282AD]" : "text-black"}`} onClick={()=>{dispatchPack({type:slink.title , payload:slink.title}); setHamToggle((preVal) => !preVal)}}>
+                        <li>{slink.title}</li>
+                      </div>
+                    ))}
+                </ul>)}
               </NavLink>
             );
           })}

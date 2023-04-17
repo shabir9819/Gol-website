@@ -24,6 +24,9 @@ body{
 .mobile_navlinks{
     animation: slide_down 0.6s ease-in-out ;
 }
+.mobile_navlinks .active > .sublink{
+    display: flex;
+}
 @keyframes slide_down {
     0% {
         -webkit-transform: translateY(-300px);
@@ -42,7 +45,10 @@ body{
     font-weight: 500;
 
 }
-.navlinks .link::after{
+navlinks .link::after, .link .sublink{
+    backdrop-filter: blur(10px);
+}
+.navlinks .link::after, .link .sublink li::after{
     content: "";
     position: absolute;
     bottom: -25%;
@@ -56,13 +62,16 @@ body{
     border-radius: 5px;
    
 }
-.navlinks .link:hover:after{
+.navlinks .link:hover:after , .link .sublink li:hover:after{
     transform-origin: left;
     transform: scaleX(1);
 }
 
 .navlinks .active .link::after{
     transform: scaleX(1);
+}
+.link:hover .sublink{
+    display: flex;
 }
 
 .packages__input:focus{
